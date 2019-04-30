@@ -7,10 +7,11 @@ function NewPostForm(props) {
   let _img = me;
   let _name = "Clara Munro";
   let _text = null;
+  let _likes = 0;
 
   function handleNewPostFormSubmission(event) {
     event.preventDefault();
-    props.onNewPostCreation({text: _text.value, name: _name, img: _img});
+    props.onNewPostCreation({text: _text.value, name: _name, img: _img, likes: _likes});
     _text.value = '';
   }
 

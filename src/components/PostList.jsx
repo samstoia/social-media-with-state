@@ -9,17 +9,18 @@ function PostList(props) {
     backgroundColor: 'white'
   }
 
-  console.log(props)
 
   return (
     <div style={container}>
 
       {props.postList.map((post, index) =>
       
-        <Post 
-        img={post.img}
+        <Post onUpdateStateFromPost = {props.onUpdateStateFromPost}
+        status = {post}
+          img={post.img}
           name={post.name}
           text={post.text}
+          likes={post.likes}
           key={index}/>
       )}
     </div>
